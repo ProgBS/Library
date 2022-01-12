@@ -8,6 +8,7 @@ execute the `Test.sh` script to try it.
 ---
 
 <br>
+<br>
 
 [`Build.js`][BuildScript]
 
@@ -134,8 +135,12 @@ all modules it depends on are built in beforehand.*
 
 ![Success]
 
+<br>
+<br>
+
 ---
 
+<br>
 <br>
 
 [`Imports.json`][ImportMap]
@@ -161,8 +166,12 @@ With `Colors` we simply abbreviate **Denos** <br>
 implementation of `Terminal Formatting` <br>
 color codes.
 
+<br>
+<br>
+
 ---
 
+<br>
 <br>
 
 [`Test.sh`][TestScript]
@@ -205,8 +214,12 @@ This shell script is just used for convenience: <br>
 ➜ *Executes the build script* <br>
 ➜ *Starts the compiled program*
 
+<br>
+<br>
+
 ---
 
+<br>
 <br>
 
 `keybindings.json`
@@ -241,7 +254,7 @@ This shell script is just used for convenience: <br>
 [Download]: ../../Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/
 [BuildScript]: ../../Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Build.js
 [ImportMap]: ../../Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Configs/Imports.json
-[TestScript]: ../../Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Configs/Test.js
+[TestScript]: ../../Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Configs/Test.sh
 
 [Title]: ../../Resources/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Title.png
 [Project Directory]: ../../Resources/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World/Project%20Directory.png
