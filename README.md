@@ -1,6 +1,6 @@
 # ProgB
 
-Utilizing **[Deno]** for writing **Build Scripts**.
+Utilizing **[Deno]** to write **Build Scripts**.
 
 ---
 
@@ -8,7 +8,7 @@ Utilizing **[Deno]** for writing **Build Scripts**.
 
 ---
 
-*Should run on any platform with support for* ***Deno*** *.*
+*Should run on any platform with* ***Deno*** *support.*
 
 ---
 
