@@ -1,15 +1,10 @@
-# ProgB
 
-Utilizing **[Deno]** for writing **Build Scripts**.
+# Examples
 
-*Should run on any platform with support for* ***Deno*** *.*
 
----
+## [GCC C++20 Hello World]
 
-<kbd> **[Releases]** </kbd> <kbd> **[Examples]** </kbd> <kbd> **[Documentation]** </kbd> 
-
----
-
+*A simple `Hello World!`* ***C++*** *program to be built with* ***GCC*** *.*
 
 
 
@@ -19,8 +14,4 @@ Utilizing **[Deno]** for writing **Build Scripts**.
     ▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟
 -->
 
-[Deno]: https://deno.land/
-
-[Releases]: https://github.com/Denoed/ProgB/releases
-[Examples]: docs/Examples.md
-[Documentation]: docs/Documentation.md
+[GCC C++20 Hello World]: Examples/GCC%E2%80%82C++20%E2%80%82Hello%E2%80%82World.md

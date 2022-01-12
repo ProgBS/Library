@@ -8,7 +8,7 @@ await Project(import.meta.url,async (project) => {
     const { green , white , bold , blue } = Colors;
 
 
-    header(white(' '),blue(bold('GCC C++20 Hello World')));
+    header(blue('+'),blue(bold('GCC C++20 Hello World')));
 
     spacer();
     log(bold('Project Directory: ') + prettyPath(cwd()));
@@ -35,5 +35,5 @@ await Project(import.meta.url,async (project) => {
     });
 
 
-    header(white(' '),green(bold('Build Successful')));
+    header(' ',green(bold('Build Successful')));
 });
