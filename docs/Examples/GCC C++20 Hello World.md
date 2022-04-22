@@ -1,9 +1,9 @@
 
 # GCC C++20 Hello World
 
-If you installed **[Deno]** & **[GCC]**, you are good to go <br>
-and can simply **[Download]** this example and <br>
-execute the `Test.sh` script to try it.
+If you installed **[Deno]** & **[GCC]**, you are good to <br>
+go and can simply **[Download]** this example <br>
+and execute the `Test.sh` script to try it.
 
 ---
 
@@ -37,8 +37,8 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    const { cwd , header , log , spacer , prettyPath } = project;
-    const { green , white , bold , blue } = Colors;
+const { cwd , header , log , spacer , prettyPath } = project;
+const { green , white , bold , blue } = Colors;
 ```
 
 *Here we select a couple of functions to use in our build process,* <br>
@@ -48,7 +48,7 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    header(blue('+'),blue(bold('GCC C++20 Hello World')));
+header(blue('+'),blue(bold('GCC C++20 Hello World')));
 ```
 
 *We print a centered header with bold, blue <br>*
@@ -60,9 +60,9 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    spacer();
-    log(bold('Project Directory: ') + prettyPath(cwd()));
-    spacer(2);
+spacer();
+log(bold('Project Directory: ') + prettyPath(cwd()));
+spacer(2);
 ```
 
 *We print the projects' working directory with padding before and afterwards.*
@@ -73,7 +73,7 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    const { discoverFiles , prepareDir , gcc } = project;
+const { discoverFiles , prepareDir , gcc } = project;
 ```
 
 *More functions we will be using.*
@@ -82,11 +82,11 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    const sources = await discoverFiles({
-        subfolders : true ,
-        extension : 'cpp' ,
-        folder : 'Source' ,
-    });
+const sources = await discoverFiles({
+    subfolders : true ,
+    extension : 'cpp' ,
+    folder : 'Source' ,
+});
 ```
 
 *We collect all files in the `Source` folder that end with `.cpp` .* <br>
@@ -96,7 +96,7 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    await prepareDir('Build');
+await prepareDir('Build');
 ```
 
 *The `Build` directory is created if it doesn't* <br>
@@ -106,13 +106,13 @@ await Project(import.meta.url,async (project) => {
 <br>
 
 ```js
-    await gcc({
-        buildFolder : 'Build' ,
-        executable : 'App' ,
-        modules : sources ,
-        verbose : false ,
-        main : 'Main.cpp'
-    });
+await gcc({
+    buildFolder : 'Build' ,
+    executable : 'App' ,
+    modules : sources ,
+    verbose : false ,
+    main : 'Main.cpp'
+});
 ```
 
 *We compile our source files with* ***GCC*** *, `C++20` is implied.*
@@ -127,8 +127,7 @@ all modules it depends on are built in beforehand.*
 <br>
 
 ```js
-    header(white(' '),green(bold('Build Successful')));
-});
+header(white(' '),green(bold('Build Successful')));
 ```
 
 *Lastly we print a message of success.*
