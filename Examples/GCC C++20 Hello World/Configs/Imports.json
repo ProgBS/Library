@@ -1,8 +1,0 @@
-{
-    "imports" : {
-
-        "Build" : "https://raw.githubusercontent.com/Denoed/ProgB/0.1.0/Source/Build.js",
-
-        "Colors" : "https://deno.land/std@0.120.0/fmt/colors.ts"
-    }
-}
