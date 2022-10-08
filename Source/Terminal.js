@@ -1,6 +1,9 @@
 
+const { consoleSize } = Deno;
+
+
 export function size(){
-    return Deno.consoleSize();
+    return consoleSize();
 }
 
 export function width(){

@@ -2,8 +2,8 @@
 import { width } from './Terminal.js';
 
 
-
 const { floor , ceil } = Math;
+const { log } = console;
 
 
 const content = (text) => text
@@ -13,13 +13,21 @@ const contentWidth = (text) =>
     content(text).length;
 
 
+export function print ( ... args ){
+    log( ... args );
+}
 
-export function spacer(project,lines){
-    project.log('\n'.repeat(lines - 1));
+export function clear (){
+    console.clear();
 }
 
 
-export function separator(project,symbol = ' '){
+export function spacer(lines){
+    log('\n'.repeat(lines - 1));
+}
+
+
+export function separator(symbol = ' '){
 
     const symbolWidth = contentWidth(symbol);
 
@@ -37,14 +45,14 @@ export function separator(project,symbol = ' '){
     if(lineWidth < columns)
         line += symbol.substring(0,columns - lineWidth);
 
-    project.log(line);
+    log(line);
 }
 
-export function header(project,symbol = ' ',text = ''){
+export function header({ fill = ' ' , text = '' }){
 
     const
         textWidth = contentWidth(text),
-        symbolWidth = contentWidth(symbol);
+        symbolWidth = contentWidth(fill);
 
     let padding = width();
     padding -= textWidth;
@@ -52,11 +60,11 @@ export function header(project,symbol = ' ',text = ''){
     padding *= 0.5;
 
     const header =
-        symbol +
-        project.spacer.repeat(floor(padding)) + text +
-        project.spacer.repeat(ceil(padding)) + symbol;
+        fill +
+        ' '.repeat(floor(padding)) + text +
+        ' '.repeat(ceil(padding)) + fill;
 
-    separator(project,symbol);
-    project.log(header);
-    separator(project,symbol);
+    separator(fill);
+    log(header);
+    separator(fill);
 }

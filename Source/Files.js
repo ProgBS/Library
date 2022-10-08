@@ -1,33 +1,43 @@
 
-import { Path } from './Imports.js';
+import { fromFileUrl , dirname } 
+from 'https://deno.land/std@0.159.0/path/mod.ts';
+
+import { ensureDir , emptyDir , walk }
+from 'https://deno.land/std@0.159.0/fs/mod.ts'
+
+export { join }
+from 'https://deno.land/std@0.159.0/path/mod.ts';
 
 
+export function folder ( meta ){
+    return dirname(fromFileUrl(meta.url));
+}
 
-export async function discover(path,options){
 
-    const files = [];
+export async function prepare ({ empty , path }){
+    
+    const action = (empty)
+        ? emptyDir
+        : ensureDir ;
+        
+    await action(path);
+}
 
-    try {
 
-        for await (const dir of Deno.readDir(path)){
+export async function discover ({ extension , subfolders , path }){
 
-            const { name , isFile , isDirectory } = dir;
+    const paths = [];
 
-            const filepath = Path.join(path,name);
-
-            switch(true){
-            case isFile:
-                if(name.endsWith(options.extension))
-                    files.push(filepath);
-                continue;
-            case isDirectory:
-                files.push(... await discover(filepath,options));
-                continue;
-            }
-        }
-    } catch (e) {
-        console.error(e);
+    const options = {
+        maxDepth : subfolders ? Math.Infinity : 1 ,
+        includeDirs : false ,
+        includeFiles : true ,
+        followSymlinks : false ,
+        exts : [ extension ]
     }
 
-    return files;
+    for await (const entry of walk(path,options))
+        paths.push(entry.path);
+
+    return paths;
 }
